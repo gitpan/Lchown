@@ -1,0 +1,14 @@
+Revision history for Perl extension Lchown.
+
+0.01  Fri Sep 26 19:40:59 2003
+    - original version; created by h2xs 1.19
+
+0.02  Sun Sep 28 08:42:17 2003
+    - got it working and added tests
+
+0.03  Sun Sep 28 18:22:05 2003
+    - tidied docs and Makefile.PL
+
+0.04  Tue Sep 30 06:24:59 2003
+    - added a README
+
