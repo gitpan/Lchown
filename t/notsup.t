@@ -9,12 +9,12 @@ SKIP: {
     my $gid = $) =~ /^(\d+)/;
 
     ok( ! defined lchown($uid, $gid), "null lchown call failed" );
-    like( $!, qr/operation not supported/i, "null lchown gave ENOTSUP" );
+    like( $!, qr/function not implemented/i, "null lchown gave ENOSYS" );
     
     symlink 'bar', 'foo' or die "symlink: $!";
 
     ok( ! defined lchown($uid, $gid, 'foo'), "valid lchown call failed" );
-    like( $!, qr/operation not supported/i, "valid lchown gave ENOTSUP" );
+    like( $!, qr/function not implemented/i, "valid lchown gave ENOSYS" );
     
     unlink 'foo' or die "unlink: $!";
 }

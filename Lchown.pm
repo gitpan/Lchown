@@ -10,7 +10,7 @@ require DynaLoader;
 @EXPORT    = qw(lchown);
 @EXPORT_OK = qw(lchown LCHOWN_AVAILABLE);
 
-$VERSION = '0.05';
+$VERSION = '0.06';
 
 bootstrap Lchown $VERSION;
 
@@ -67,7 +67,7 @@ symlinks will not be followed.  Returns the number of files successfully
 changed.
 
 On systems without the C<lchown()> system call, C<lchown> always returns
-C<undef> and sets C<errno> to C<ENOTSUP> (Operation not supported).
+C<undef> and sets C<errno> to C<ENOSYS> (Function not implemented).
 
 =back
 

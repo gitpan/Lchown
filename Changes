@@ -15,3 +15,6 @@ Revision history for Perl extension Lchown.
 0.05  Tue Sep 30 06:51:57 2003
     - really added a README this time
 
+0.06  Wed Oct  1 04:26:00 2003
+    - replaced ENOTSUP with the more appropriate ENOSYS
+

@@ -25,7 +25,7 @@ lchown(owner, group, ...)
                 ok++;
         sv_setnv(ST(0), (double)ok);
 #else
-        errno = ENOTSUP;
+        errno = ENOSYS;
         ST(0) = &PL_sv_undef;
 #endif
 
