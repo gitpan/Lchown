@@ -3,6 +3,7 @@ Lchown.pm
 Lchown.xs
 MANIFEST
 Makefile.PL
+README
 t/allplatforms.t
 t/noimport.t
 t/notsup.t
