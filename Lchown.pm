@@ -10,7 +10,7 @@ require DynaLoader;
 @EXPORT    = qw(lchown);
 @EXPORT_OK = qw(lchown LCHOWN_AVAILABLE);
 
-$VERSION = '0.06';
+$VERSION = '0.07';
 
 bootstrap Lchown $VERSION;
 
@@ -95,7 +95,7 @@ Nick Cleaton E<lt>nick@cleaton.netE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2003 by Nick Cleaton
+Copyright (C) 2003-2004 by Nick Cleaton
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.8.0 or,
