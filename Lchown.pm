@@ -10,7 +10,7 @@ require DynaLoader;
 @EXPORT    = qw(lchown);
 @EXPORT_OK = qw(lchown LCHOWN_AVAILABLE);
 
-$VERSION = '0.07';
+$VERSION = '1.00';
 
 bootstrap Lchown $VERSION;
 

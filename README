@@ -8,7 +8,7 @@ DEPENDENCIES
 
    The test suite requires the Test::More module, available from CPAN.
 
-   The oldest perl version that I've tested against is 5.00503.
+   The oldest perl version that I've tested against is 5.00404.
 
 INSTALLATION
 
@@ -24,7 +24,7 @@ Since the lchown system call often requires root privileges to make any
 change, most of the tests will be skipped unless "make test" is run as
 root.
 
-Copyright (C) 2003 by Nick Cleaton
+Copyright (C) 2003-2004 by Nick Cleaton
 
 This library is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself, either Perl version 5.8.0 or, at

@@ -17,15 +17,14 @@ lchown(owner, group, ...)
         int ok;
         STRLEN len;
     CODE:
-        ST(0) = sv_newmortal();
 #ifdef HAS_LCHOWN
         ok = 0;
         for ( i=2 ; i<items ; i++ )
             if ( lchown((char *)SvPV(ST(i),len), owner, group) == 0 )
                 ok++;
-        sv_setnv(ST(0), (double)ok);
+        ST(0) = sv_2mortal(newSViv(ok));
 #else
         errno = ENOSYS;
-        ST(0) = &PL_sv_undef;
+        ST(0) = &sv_undef;
 #endif
 

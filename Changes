@@ -1,23 +1,28 @@
 Revision history for Perl extension Lchown.
 
-0.01  Fri Sep 26 19:40:59 2003
+0.01  Sep 26 2003
     - original version; created by h2xs 1.19
 
-0.02  Sun Sep 28 08:42:17 2003
+0.02  Sep 28 2003
     - got it working and added tests
 
-0.03  Sun Sep 28 18:22:05 2003
+0.03  Sep 28 2003
     - tidied docs and Makefile.PL
 
-0.04  Tue Sep 30 06:24:59 2003
+0.04  Sep 30 2003
     - added a README
 
-0.05  Tue Sep 30 06:51:57 2003
+0.05  Sep 30 2003
     - really added a README this time
 
-0.06  Wed Oct  1 04:26:00 2003
+0.06  Oct 01 2003
     - replaced ENOTSUP with the more appropriate ENOSYS
 
-0.07 
+0.07  Jan 02 2004
     - fixed test failure on platforms without symlinks
 
+1.00  Nov 13 2004
+    - now works on perls back to 5.00404
+      minor code tidy
+      added pod tests
+   
