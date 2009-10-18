@@ -12,10 +12,10 @@ DEPENDENCIES
 
 INSTALLATION
 
-   perl Makefile.PL
-   make
-   make test
-   make install
+   perl Build.PL
+   ./Build
+   ./Build test
+   ./Build install
 
 This module should build and pass tests on systems without the lchown
 system call.  Any lchown call will fail at runtime on such systems.
@@ -24,9 +24,7 @@ Since the lchown system call often requires root privileges to make any
 change, most of the tests will be skipped unless "make test" is run as
 root.
 
-Copyright (C) 2003-2004 by Nick Cleaton
+Copyright 2003-2009 Nick Cleaton, all rights reserved.
 
-This library is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself, either Perl version 5.8.0 or, at
-your option, any later version of Perl 5 you may have available.
-
+This program is free software; you can redistribute it and/or modify it under
+the same terms as Perl itself.

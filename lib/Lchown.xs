@@ -3,7 +3,7 @@
 #include "XSUB.h"
 
 
-MODULE = Lchown		PACKAGE = Lchown		
+MODULE = Lchown     PACKAGE = Lchown
 
 PROTOTYPES: ENABLE
 
@@ -25,6 +25,6 @@ lchown(owner, group, ...)
         ST(0) = sv_2mortal(newSViv(ok));
 #else
         errno = ENOSYS;
-        ST(0) = &sv_undef;
+        ST(0) = &PL_sv_undef;
 #endif
 

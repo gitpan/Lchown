@@ -1,3 +1,5 @@
+use strict;
+use warnings;
 use Test::More (tests => 17);
 
 use Lchown qw(lchown LCHOWN_AVAILABLE);

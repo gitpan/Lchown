@@ -1,3 +1,6 @@
+use strict;
+use warnings;
+
 use Test::More (tests => 6);
 
 use Lchown qw(lchown LCHOWN_AVAILABLE);
@@ -11,6 +14,9 @@ SKIP: {
     ok( ! defined lchown($uid, $gid), "null lchown call failed" );
     like( $!, '/function not implemented/i', "null lchown gave ENOSYS" );
     
+    my $symlink_exists = eval { symlink("",""); 1 };
+    skip "Symlink not supported", 4 if !defined($symlink_exists);
+
     symlink 'bar', 'foo' or skip "can't make a symlink", 2;
     ok( ! defined lchown($uid, $gid, 'foo'), "valid lchown call failed" );
     like( $!, '/function not implemented/i', "valid lchown gave ENOSYS" );

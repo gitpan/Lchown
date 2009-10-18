@@ -1,18 +1,18 @@
 package Lchown;
-
 use strict;
+use warnings;
 use vars qw($VERSION @ISA @EXPORT @EXPORT_OK);
 
 require Exporter;
-require DynaLoader;
 
-@ISA = qw(Exporter DynaLoader);
+@ISA = qw(Exporter);
 @EXPORT    = qw(lchown);
 @EXPORT_OK = qw(lchown LCHOWN_AVAILABLE);
 
-$VERSION = '1.00';
+$VERSION = '1.01';
 
-bootstrap Lchown $VERSION;
+require XSLoader;
+XSLoader::load('Lchown', $VERSION);
 
 sub LCHOWN_AVAILABLE () {
     defined lchown(0,0) ? 1 : 0;
@@ -95,10 +95,9 @@ Nick Cleaton E<lt>nick@cleaton.netE<gt>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2003-2004 by Nick Cleaton
+Copyright 2003-2009 Nick Cleaton, all rights reserved.
 
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself, either Perl version 5.8.0 or,
-at your option, any later version of Perl 5 you may have available.
+This program is free software; you can redistribute it and/or modify it under
+the same terms as Perl itself.
 
 =cut

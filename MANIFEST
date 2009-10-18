@@ -1,13 +1,15 @@
+Build.PL
 Changes
-Lchown.pm
-Lchown.xs
-MANIFEST
-Makefile.PL
+lib/Lchown.pm
+lib/Lchown.xs
+MANIFEST			This list of files
+MANIFEST.SKIP
 README
-META.yml
 t/allplatforms.t
 t/noimport.t
 t/notsup.t
-t/sup.t
-t/pod.t
 t/pod-coverage.t
+t/pod.t
+t/sup.t
+Makefile.PL
+META.yml
